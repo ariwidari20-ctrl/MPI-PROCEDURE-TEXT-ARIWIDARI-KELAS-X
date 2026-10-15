@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Multimedia Pembelajaran Interaktif Bahasa Inggris Kelas X SMK: Procedure Text">
+<title>MPI Procedure Text | How to Make Tea</title>
+<style>
+:root{--navy:#14324b;--blue:#246b8e;--teal:#20a39e;--cream:#fffaf0;--gold:#f4b942;--ink:#243746;--muted:#627585;--line:#dce6ec;--white:#fff;--green:#18794e;--red:#b42318}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#f2f7fa;color:var(--ink);line-height:1.55}
+header{background:linear-gradient(120deg,#14324b,#246b8e);color:#fff;padding:26px 18px 22px}
+.header-inner{max-width:1100px;margin:auto;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;color:#b9e8e4}
+h1{margin:5px 0;font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.15}
+header p{margin:8px 0 0;color:#e3f2f7}
+.pill{display:inline-block;background:#ffffff20;border:1px solid #ffffff55;padding:7px 12px;border-radius:999px;font-size:.88rem}
+main{max-width:1100px;margin:22px auto;padding:0 16px 40px}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-bottom:18px}
+.panel,.card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 6px 20px #14324b0a}
+.panel{padding:22px}.hero-visual{min-height:235px;background:linear-gradient(145deg,#fff6dc,#e2f4f0);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.tea-art{font-size:6.5rem;filter:drop-shadow(0 10px 6px #0002)}
+.bubbles{position:absolute;font-size:1.8rem;opacity:.75}.b1{top:20px;left:20px}.b2{right:25px;top:38px}.b3{bottom:20px;left:42px}
+h2{color:var(--navy);margin:0 0 12px;font-size:1.35rem}h3{color:var(--navy);margin:0 0 8px}
+.btn{border:0;border-radius:10px;padding:11px 16px;font-weight:750;cursor:pointer;background:var(--blue);color:#fff;font-size:.96rem;transition:.15s}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}.btn.secondary{background:#e8f2f7;color:var(--navy);border:1px solid #c9dce7}.btn.gold{background:var(--gold);color:#33260b}.btn:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #f4b942;outline-offset:2px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+nav button{border:1px solid #cbdde7;background:#fff;color:var(--navy);border-radius:999px;padding:10px 15px;font-weight:750;cursor:pointer}
+nav button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.section{display:none}.section.active{display:block;animation:fade .22s ease}@keyframes fade{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:none}}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{padding:18px}.icon{font-size:2rem}.tag{display:inline-block;font-size:.75rem;font-weight:800;color:#176b67;background:#e2f6f2;padding:4px 8px;border-radius:7px;margin-bottom:8px}
+.example{background:#f8fbfc;border-left:4px solid var(--teal);padding:14px 16px;border-radius:0 12px 12px 0;margin:12px 0}
+.example h3{margin-bottom:4px}.example ul,.example ol{margin:6px 0 0;padding-left:22px}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.step{border:1px solid var(--line);border-radius:13px;padding:14px;display:flex;gap:12px;align-items:flex-start;background:#fff}
+.num{flex:0 0 34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:850}
+.small{font-size:.9rem;color:var(--muted)}.feedback{margin-top:12px;padding:12px 14px;border-radius:10px;display:none}.feedback.show{display:block}.feedback.good{background:#e9f7ef;color:#145c38}.feedback.bad{background:#fff0ed;color:#8f2017}
+.quiz-q{padding:17px 0;border-bottom:1px solid var(--line)}.quiz-q:last-child{border-bottom:0}
+label.option{display:flex;gap:10px;align-items:flex-start;padding:10px;border:1px solid var(--line);border-radius:10px;margin:7px 0;cursor:pointer}label.option:hover{background:#f5fafc}
+input[type=radio]{margin-top:5px;accent-color:var(--blue)}
+select,input[type=text]{border:1px solid #c7d8e2;border-radius:9px;padding:9px;font:inherit;background:#fff}
+.order-row{display:grid;grid-template-columns:1fr 100px;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.progress-wrap{background:#dce8ee;height:9px;border-radius:99px;overflow:hidden}.progress{height:100%;width:0;background:var(--teal);transition:width .3s}
+.score{font-size:2rem;font-weight:850;color:var(--navy)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:22px}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.header-inner{align-items:flex-start}.panel{padding:17px}}
+@media print{nav,.btn,footer{display:none!important}.section{display:block!important}.panel,.card{box-shadow:none;break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div><div class="kicker">Multimedia Pembelajaran Interaktif</div><h1>Procedure Text</h1><p>How to Make a Cup of Tea · Bahasa Inggris Kelas X SMK · Fase E</p></div>
+    <div class="pill">📘 Belajar • Berlatih • Evaluasi</div>
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <div class="panel">
+      <span class="tag">TUJUAN PEMBELAJARAN</span>
+      <h2>Let’s learn how to make tea!</h2>
+      <p>Setelah belajar, kamu dapat mengenali struktur <em>procedure text</em>, memahami kosakata instruksi, dan menyusun langkah membuat teh dengan urutan yang benar.</p>
+      <ul>
+        <li>Mengenali <strong>Goal</strong>, <strong>Materials/Ingredients</strong>, dan <strong>Steps</strong>.</li>
+        <li>Menggunakan kata kerja perintah dan kata penghubung urutan.</li>
+        <li>Mengerjakan latihan interaktif dan melihat hasilnya langsung.</li>
+      </ul>
+      <button class="btn gold" onclick="showTab('materi')">Mulai Belajar →</button>
+    </div>
+    <div class="panel hero-visual" aria-label="Ilustrasi secangkir teh">
+      <span class="bubbles b1">🍃</span><span class="bubbles b2">☀️</span><span class="bubbles b3">✨</span>
+      <div class="tea-art" role="img" aria-label="Secangkir teh">🍵</div>
+    </div>
+  </div>
+
+  <nav aria-label="Navigasi materi">
+    <button class="active" data-tab="beranda" onclick="showTab('beranda')">🏠 Beranda</button>
+    <button data-tab="materi" onclick="showTab('materi')">📖 Materi</button>
+    <button data-tab="contoh" onclick="showTab('contoh')">🍵 Contoh Teks</button>
+    <button data-tab="latihan" onclick="showTab('latihan')">🧩 Latihan</button>
+    <button data-tab="evaluasi" onclick="showTab('evaluasi')">📝 Evaluasi</button>
+    <button data-tab="refleksi" onclick="showTab('refleksi')">💭 Refleksi</button>
+  </nav>
+
+  <section id="beranda" class="section active">
+    <div class="panel">
+      <h2>Petunjuk Penggunaan</h2>
+      <div class="grid3">
+        <div class="card"><div class="icon">👀</div><h3>1. Pelajari</h3><p>Buka menu Materi dan pahami tiga struktur procedure text.</p></div>
+        <div class="card"><div class="icon">🧩</div><h3>2. Berlatih</h3><p>Kerjakan latihan mencocokkan struktur dan mengurutkan langkah.</p></div>
+        <div class="card"><div class="icon">✅</div><h3>3. Evaluasi</h3><p>Jawab kuis. Nilai dan umpan balik akan muncul setelah diperiksa.</p></div>
+      </div>
+      <div class="example"><strong>Ingat!</strong> Procedure text menjelaskan cara membuat, melakukan, atau menggunakan sesuatu melalui langkah-langkah yang jelas dan berurutan.</div>
+    </div>
+  </section>
+
+  <section id="materi" class="section">
+    <div class="panel">
+      <h2>Struktur Procedure Text</h2>
+      <p><em>Procedure text</em> adalah teks yang menjelaskan cara melakukan atau membuat sesuatu. Tujuan komunikatifnya adalah <strong>to explain how to make or do something</strong>.</p>
+      <div class="grid3">
+        <div class="card"><div class="icon">🎯</div><span class="tag">BAGIAN 1</span><h3>Goal</h3><p>Menjelaskan tujuan atau hasil yang ingin dibuat.</p><div class="example"><strong>Contoh:</strong><br>How to Make a Cup of Tea.</div></div>
+        <div class="card"><div class="icon">🫖</div><span class="tag">BAGIAN 2</span><h3>Materials / Ingredients</h3><p>Menyebutkan bahan dan alat yang diperlukan.</p><div class="example"><strong>Contoh:</strong><br>A tea bag, water, sugar, a cup, and a kettle.</div></div>
+        <div class="card"><div class="icon">➡️</div><span class="tag">BAGIAN 3</span><h3>Steps</h3><p>Menjelaskan tindakan dalam urutan yang logis.</p><div class="example"><strong>Contoh:</strong><br>First, boil the water.</div></div>
+      </div>
+      <hr>
+      <h2>Unsur Kebahasaan</h2>
+      <div class="grid3">
+        <div class="card"><h3>Imperative verbs</h3><p>prepare = siapkan<br>boil = didihkan<br>pour = tuangkan<br>add = tambahkan<br>stir = aduk<br>serve = sajikan</p></div>
+        <div class="card"><h3>Sequencing words</h3><p>First = pertama<br>Next = berikutnya<br>Then = kemudian<br>After that = setelah itu<br>Finally = akhirnya</p></div>
+        <div class="card"><h3>Kalimat instruksi</h3><p>Gunakan kata kerja dasar untuk memberi instruksi, misalnya “Put the tea bag into the cup.”</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contoh" class="section">
+    <div class="panel">
+      <h2>How to Make a Cup of Tea</h2>
+      <p>Perhatikan setiap bagian teks berikut. Struktur ditandai dengan warna agar mudah dikenali.</p>
+      <div class="example"><h3>🎯 Goal</h3><p>How to make a delicious cup of tea.</p></div>
+      <div class="example"><h3>🫖 Materials and Ingredients</h3><ul><li>A tea bag</li><li>A cup of hot water</li><li>Sugar (optional)</li><li>A cup and a teaspoon</li><li>A kettle</li></ul></div>
+      <div class="example"><h3>➡️ Steps</h3><ol><li>First, prepare a cup, a tea bag, water, and a kettle.</li><li>Next, boil the water using the kettle.</li><li>Then, put the tea bag into the cup.</li><li>After that, carefully pour the hot water into the cup.</li><li>Wait for three to five minutes.</li><li>Add sugar if you like.</li><li>Finally, stir the tea and serve it carefully.</li></ol></div>
+      <div class="example"><strong>⚠️ Keselamatan:</strong> Air panas harus ditangani dengan hati-hati dan dengan pengawasan guru/orang dewasa bila diperlukan.</div>
+      <button class="btn" onclick="showTab('latihan')">Saya siap berlatih →</button>
+    </div>
+  </section>
+
+  <section id="latihan" class="section">
+    <div class="panel">
+      <h2>Latihan 1 — Identify the Structure</h2>
+      <p>Pilih struktur yang sesuai untuk setiap kutipan.</p>
+      <div class="quiz-q"><strong>1. “How to make a delicious cup of tea.”</strong>
+        <label class="option"><input type="radio" name="q1" value="goal"> Goal</label>
+        <label class="option"><input type="radio" name="q1" value="materials"> Materials/Ingredients</label>
+        <label class="option"><input type="radio" name="q1" value="steps"> Steps</label>
+      </div>
+      <div class="quiz-q"><strong>2. “A tea bag, sugar, a cup, and a kettle.”</strong>
+        <label class="option"><input type="radio" name="q2" value="goal"> Goal</label>
+        <label class="option"><input type="radio" name="q2" value="materials"> Materials/Ingredients</label>
+        <label class="option"><input type="radio" name="q2" value="steps"> Steps</label>
+      </div>
+      <div class="quiz-q"><strong>3. “Finally, stir the tea and serve it carefully.”</strong>
+        <label class="option"><input type="radio" name="q3" value="goal"> Goal</label>
+        <label class="option"><input type="radio" name="q3" value="materials"> Materials/Ingredients</label>
+        <label class="option"><input type="radio" name="q3" value="steps"> Steps</label>
+      </div>
+      <button class="btn" onclick="checkStructure()">Periksa Jawaban</button>
+      <div id="structureFeedback" class="feedback" role="status"></div>
+      <hr>
+      <h2>Latihan 2 — Arrange the Steps</h2>
+      <p>Pilih nomor urutan yang tepat untuk setiap langkah. Setiap nomor hanya boleh digunakan satu kali.</p>
+      <div id="orderList"></div>
+      <button class="btn" onclick="checkOrder()">Periksa Urutan</button>
+      <button class="btn secondary" onclick="resetOrder()">Ulangi Latihan</button>
+      <div id="orderFeedback" class="feedback" role="status"></div>
+    </div>
+  </section>
+
+  <section id="evaluasi" class="section">
+    <div class="panel">
+      <h2>Evaluasi Akhir</h2>
+      <p>Jawab semua pertanyaan. Setiap jawaban benar bernilai 20 poin. Nilai akan ditampilkan setelah tombol periksa ditekan.</p>
+      <form id="finalQuiz">
+        <div class="quiz-q"><strong>1. Apa tujuan utama procedure text?</strong>
+          <label class="option"><input type="radio" name="e1" value="a"> Menceritakan pengalaman masa lalu</label>
+          <label class="option"><input type="radio" name="e1" value="b"> Menjelaskan cara melakukan atau membuat sesuatu</label>
+          <label class="option"><input type="radio" name="e1" value="c"> Menggambarkan seseorang</label>
+        </div>
+        <div class="quiz-q"><strong>2. Bagian yang menyebutkan bahan dan alat adalah ...</strong>
+          <label class="option"><input type="radio" name="e2" value="a"> Goal</label>
+          <label class="option"><input type="radio" name="e2" value="b"> Steps</label>
+          <label class="option"><input type="radio" name="e2" value="c"> Materials/Ingredients</label>
+        </div>
+        <div class="quiz-q"><strong>3. “First, boil the water.” termasuk bagian ...</strong>
+          <label class="option"><input type="radio" name="e3" value="a"> Steps</label>
+          <label class="option"><input type="radio" name="e3" value="b"> Goal</label>
+          <label class="option"><input type="radio" name="e3" value="c"> Materials</label>
+        </div>
+        <div class="quiz-q"><strong>4. Kata yang menunjukkan urutan terakhir adalah ...</strong>
+          <label class="option"><input type="radio" name="e4" value="a"> Next</label>
+          <label class="option"><input type="radio" name="e4" value="b"> Finally</label>
+          <label class="option"><input type="radio" name="e4" value="c"> First</label>
+        </div>
+        <div class="quiz-q"><strong>5. Kata kerja instruksi yang berarti “aduk” adalah ...</strong>
+          <label class="option"><input type="radio" name="e5" value="a"> Pour</label>
+          <label class="option"><input type="radio" name="e5" value="b"> Prepare</label>
+          <label class="option"><input type="radio" name="e5" value="c"> Stir</label>
+        </div>
+        <button type="button" class="btn" onclick="gradeFinal()">Lihat Nilai</button>
+        <button type="reset" class="btn secondary" onclick="resetFinal()">Ulangi Evaluasi</button>
+      </form>
+      <div id="finalResult" class="feedback" role="status"></div>
+    </div>
+  </section>
+
+  <section id="refleksi" class="section">
+    <div class="panel">
+      <h2>Refleksi Pembelajaran</h2>
+      <p>Pilih jawaban yang paling sesuai dengan pengalaman belajarmu.</p>
+      <label for="reflection1"><strong>1. Apakah kamu dapat menyebutkan tiga struktur procedure text?</strong></label><br>
+      <select id="reflection1"><option value="">Pilih jawaban</option><option>Ya, sudah paham</option><option>Masih perlu latihan</option><option>Belum paham</option></select>
+      <br><br><label for="reflection2"><strong>2. Bagian mana yang paling membantumu belajar?</strong></label><br>
+      <select id="reflection2"><option value="">Pilih jawaban</option><option>Materi dan contoh teks</option><option>Latihan struktur</option><option>Mengurutkan langkah</option><option>Evaluasi akhir</option></select>
+      <br><br><label for="reflection3"><strong>3. Apa yang perlu kamu pelajari lagi?</strong></label><br>
+      <input id="reflection3" type="text" placeholder="Tuliskan jawaban singkat..." style="width:min(100%,520px)">
+      <br><br><button class="btn" onclick="saveReflection()">Simpan Refleksi</button>
+      <div id="reflectionFeedback" class="feedback" role="status"></div>
+      <hr>
+      <h3>Kesimpulan</h3>
+      <p>Procedure text memiliki tiga struktur utama: <strong>Goal</strong> (tujuan), <strong>Materials/Ingredients</strong> (bahan dan alat), dan <strong>Steps</strong> (langkah-langkah). Gunakan kata kerja instruksi dan kata penghubung urutan agar prosedur jelas dan mudah diikuti.</p>
+      <button class="btn secondary" onclick="window.print()">🖨️ Cetak Materi / Simpan sebagai PDF</button>
+    </div>
+  </section>
+</main>
+<footer>MPI Bahasa Inggris Kelas X SMK · Procedure Text · Dibuat sebagai media pembelajaran mandiri/offline.</footer>
+<script>
+const tabs = ['beranda','materi','contoh','latihan','evaluasi','refleksi'];
+function showTab(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===id));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function feedback(id,msg,good){
+ const el=document.getElementById(id);el.textContent=msg;el.className='feedback show '+(good?'good':'bad');
+}
+function checkStructure(){
+ const keys={q1:'goal',q2:'materials',q3:'steps'};let score=0,unanswered=0;
+ for(const [name,key] of Object.entries(keys)){const picked=document.querySelector('input[name="'+name+'"]:checked');if(!picked)unanswered++;else if(picked.value===key)score++;}
+ if(unanswered){feedback('structureFeedback','Lengkapi semua pertanyaan terlebih dahulu. Jawaban terisi: '+(3-unanswered)+'/3.',false);return;}
+ const notes=score===3?'Hebat! Semua jawaban benar.':score===2?'Bagus! Ada satu jawaban yang perlu diperbaiki.':'Ayo pelajari kembali struktur Goal, Materials/Ingredients, dan Steps.';
+ feedback('structureFeedback','Skor: '+score+'/3 ('+Math.round(score/3*100)+'). '+notes+' Kunci: 1 Goal, 2 Materials/Ingredients, 3 Steps.',score===3);
+}
+const orderItems=[
+ {text:'Pour hot water into the cup.',answer:4},
+ {text:'Add sugar if you like.',answer:5},
+ {text:'Prepare the ingredients and tools.',answer:1},
+ {text:'Put the tea bag into the cup.',answer:3},
+ {text:'Boil the water.',answer:2}
+];
+function renderOrder(){
+ const box=document.getElementById('orderList');box.innerHTML='';
+ orderItems.forEach((item,i)=>{
+  const row=document.createElement('div');row.className='order-row';
+  const label=document.createElement('label');label.textContent=item.text;label.htmlFor='ord'+i;
+  const sel=document.createElement('select');sel.id='ord'+i;sel.setAttribute('aria-label','Nomor urutan untuk '+item.text);
+  const first=document.createElement('option');first.value='';first.textContent='Nomor';sel.appendChild(first);
+  for(let n=1;n<=5;n++){const op=document.createElement('option');op.value=n;op.textContent=n;sel.appendChild(op)}
+  row.append(label,sel);box.appendChild(row);
+ });
+}
+function checkOrder(){
+ let vals=orderItems.map((_,i)=>document.getElementById('ord'+i).value);
+ if(vals.some(v=>!v)){feedback('orderFeedback','Lengkapi semua nomor urutan terlebih dahulu.',false);return}
+ if(new Set(vals).size!==5){feedback('orderFeedback','Setiap nomor 1–5 harus digunakan satu kali saja.',false);return}
+ let score=0;vals.forEach((v,i)=>{if(Number(v)===orderItems[i].answer)score++});
+ const msg=score===5?'Sempurna! Urutanmu benar semua.':'Kamu benar '+score+' dari 5 langkah. Urutan benar: siapkan alat/bahan (1), didihkan air (2), masukkan tea bag (3), tuangkan air panas (4), tambahkan gula (5).';
+ feedback('orderFeedback','Skor: '+score+'/5. '+msg,score===5);
+}
+function resetOrder(){renderOrder();const el=document.getElementById('orderFeedback');el.className='feedback';el.textContent=''}
+function gradeFinal(){
+ const answers={e1:'b',e2:'c',e3:'a',e4:'b',e5:'c'};let score=0,missing=0;
+ for(const [n,a] of Object.entries(answers)){const p=document.querySelector('input[name="'+n+'"]:checked');if(!p)missing++;else if(p.value===a)score++;}
+ if(missing){feedback('finalResult','Kamu masih perlu menjawab '+missing+' pertanyaan lagi sebelum nilai dihitung.',false);return}
+ const points=score*20;let msg=points>=80?'Sangat baik! Kamu sudah memahami materi.':points>=60?'Cukup baik. Pelajari kembali bagian yang masih keliru.':'Tetap semangat! Baca materi dan contoh teks, lalu coba lagi.';
+ feedback('finalResult','Nilai kamu: '+points+'/100. Jawaban benar: '+score+'/5. '+msg,points>=80);
+}
+function resetFinal(){const el=document.getElementById('finalResult');el.className='feedback';el.textContent=''}
+function saveReflection(){
+ const a=document.getElementById('reflection1').value,b=document.getElementById('reflection2').value,c=document.getElementById('reflection3').value.trim();
+ if(!a||!b){feedback('reflectionFeedback','Pilih jawaban untuk pertanyaan 1 dan 2 terlebih dahulu.',false);return}
+ feedback('reflectionFeedback','Refleksi selesai. Terima kasih sudah mengevaluasi proses belajarmu!',true);
+}
+renderOrder();
+</script>
+</body>
+</html>
